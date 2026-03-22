@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<title>Fira Portfolio</title>
+<link rel="stylesheet" href="sty.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<!-- <h2 class="logo">Fira</h2> -->
+<img src="/pro/logooo.png" alt="Fira" width="100" height="70">
+<ul>
+<li><a href="#home" id="hom">Home</a></li>
+<li><a href="#about" id="abo">About</a></li>
+<li><a href="#skills" id="skil">Skills</a></li>
+<li><a href="#works" id="wor">My Projects</a></li>
+<li><a href="#contact" id="cont">Contact</a></li>
+<!-- <li>
+  <a href="cv.pdf" download class="download-cv" id="down">
+    &#8681; Download CV
+  </a>
+  
+</li> -->
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="Home">
+
+<div class="Home-text">
+            <h1> Hello, <br>
+                I'm Firaol Desalegn</h1>
+            <h2><strong>a</strong>
+                <span style="--i:4" data-text=" Web Developer">Web Developer</span>
+                <span style="--i:3" data-text=" Frontend Developer"> Frontend Developer</span>
+                <span style="--i:2" data-text=" UI / Design"> UI / Design</span>
+                <span style="--i:1" data-text="Mobile app developer">Mobile app developer</span>
+            </h2>
+<p>I create beautiful and functional websites.</p>
+
+<button class="btn" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">View My Work</button>
+<button class="btn"  onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+
+
+
+
+ <!-- SOCIAL ICONS HERE -->
+  <div class="SocialIcon">
+    <a href="https://github.com/firayenate" target="_blank"><i class='bx bxl-github'></i></a>
+    <a href="https://instagram.com/in/firayenate" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://linkedin.com/in/firayenate" target="_blank">
+    <i class='bx bxl-linkedin'></i>
+  </a>
+    <a href="https://telegram.com/in/firayenate" target="_blank"><i class='bx bxl-telegram'></i></a>
+  </div>
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<img src="pro/photo_2026-03-17_21-40-21.jpg" alt="profile" width="250" height="400" >
+
+<div class="about-text">
+
+<h2>About Me</h2>
+<div class="about-text-glass">
+
+
+<p id="para">
+Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy creating responsive and interactive websites using HTML, CSS, JavaScript, Python, and Vue.js. I love turning ideas into real projects, learning new technologies, and continuously improving my coding skills.
+</p>
+</div>
+<button id="readMoreBtn">Read More</button>
+
+</div>
+
+</section>
+
+<script>
+  const para = document.getElementById("para");
+  const btn = document.getElementById("readMoreBtn");
+
+  let expanded = false;
+
+  btn.addEventListener("click", () => {
+    if (!expanded) {
+      para.innerHTML = `
+        Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy building responsive, interactive, and user-friendly websites using HTML, CSS, JavaScript, Python, and Vue.js.<br><br>
+        I have hands-on experience in designing databases, implementing backend logic, and creating full-stack web applications. I love turning ideas into real projects, solving coding challenges, and continuously improving my programming skills.<br><br>
+        I’m dedicated to writing clean, efficient code and learning the latest technologies to stay up-to-date in the fast-paced world of web development. My goal is to create applications that are not only functional but also meaningful and impactful.
+      `;
+      btn.textContent = "Show Less";
+      expanded = true;
+    } else {
+      para.innerHTML = `
+        Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy creating responsive and interactive websites using HTML, CSS, JavaScript, Python, and Vue.js. I love turning ideas into real projects, learning new technologies, and continuously improving my coding skills.
+      `;
+      btn.textContent = "Read More";
+      expanded = false;
+    }
+  });
+</script>
+
+
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+<h2>My Skills</h2>
+
+<div class="skill-container">
+
+<div class="skill-card" id="ht">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+<h3>HTML</h3>
+</div>
+
+<div class="skill-card" id="cs">
+  <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon">
+<h3>CSS</h3>
+</div>
+
+<div class="skill-card" id="js">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icon">
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill-card" id="py">
+   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon">
+<h3>Python</h3>
+</div>
+<div class="skill-card" id="vu">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Vue.js Icon">
+  <h3>Vue.js</h3>
+</div>
+<div class="skill-card" id="ja">
+  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Icon">
+  <h3>Java</h3>
+</div>
+
+<div class="skill-card" id="c">
+  <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Icon">
+  <h3>C++</h3>
+</div>
+
+<div class="skill-card" id="jg">
+  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java GUI Icon">
+  <h3>Java GUI</h3>
+</div>
+
+<div class="skill-card" id="da">
+  <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database Icon">
+  <h3>Database</h3>
+</div>
+</section>
+
+
+
+<section id="works" class="works">
+  <h2>My Projects</h2>
+<div class="projects-container">
+<div class="project-card">
+  <img src="pro/library.jpg" alt="Library Management System in Java">
+  <h3>Library Management System</h3>
+  <p>A Java GUI application to manage books, users, and borrowing transactions efficiently.</p>
+  <a href="library-management-java.html" class="btn" target="_blank">View Project</a>
+</div>
+<div class="projects-container">
+ <div class="project-card">
+
+<img src="pro/shoe.jpg" alt="Shoe Shop">
+<h3>Shoe Shop</h3>
+ <p>A responsive online Shoe Shop website with product listings, shopping cart, and checkout functionality.</p>
+  <a href="pro/index.html"  class="btn" target="_blank">View Project</a>
+ </div>
+<div class="project-card">
+  <img src="pro/rock.jpg" alt="Rock Paper Scissors Game">
+  <h3>Rock Paper Scissors Game</h3>
+  <p>A simple JavaScript game where you can play Rock, Paper, Scissors against the computer. Includes score tracking and fun interaction.</p>
+  <a href="pro/rock-paper-scissor.html" class="btn" target="_blank">View Project</a>
+</div>
+<div class="project-card">
+
+   <img src="pro/port.jpg" alt="My Portfolio">
+  <h3>My Portfolio</h3>
+<p>My personal portfolio website showcasing my projects and skills.</p>
+  <a href="home.html" class="btn" target="_blank">View Project</a>
+</div>
+
+
+<div class="project-card">
+  <img src="pro/car-rental.jpg" alt="Car Rental System">
+  <h3>Car Rental System</h3>
+  <p>A C++ program to manage car rentals, including booking, returns, and customer info.</p>
+  <a href="pro/home.html" class="btn" target="_blank">View Project</a>
+</div>
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class='bx bxs-phone'></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>0940065187</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxs-envelope'></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>firaoldesalegn680@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxl-telegram'></i>
+                    <div>
+                        <h4>Telegram</h4>
+                        <p>@firayenate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+             <form action="https://formspree.io/f/yourformid" method="POST">
+  <div class="input-box">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+  </div>
+  <div class="input-box">
+    <input type="number" name="mobile" placeholder="Mobile Number" required>
+    <input type="text" name="subject" placeholder="Email Subject" required>
+  </div>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="submit" value="Send Message" class="btn">
+  <input type="reset" value="Clear" class="btn">
+</form>
+            </div>
+        </div>
+        <footer>
+        <p>&copy; 2026 Firaol Desalegn Bekele | All Rights Reserved</p>
+    </footer>
+
+    </section>
+
+
+
+
+</body>
+</html>
