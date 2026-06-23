@@ -15,101 +15,97 @@
 
 <!-- NAVBAR -->
 <nav>
-<!-- <h2 class="logo">Fira</h2> -->
 <img src="pro/logooo.png" alt="Fira" width="100" height="70">
+<div class="menu-toggle" id="mobile-menu">
+  <i class="bx bx-menu"></i>
+</div>
 <ul>
-<li><a href="#home" id="hom">Home</a></li>
-<li><a href="#about" id="abo">About</a></li>
-<li><a href="#skills" id="skil">Skills</a></li>
-<li><a href="#works" id="wor">My Projects</a></li>
-<li><a href="#contact" id="cont">Contact</a></li>
-<!-- <li>
-  <a href="cv.pdf" download class="download-cv" id="down">
-    &#8681; Download CV
-  </a>
-  
-</li> -->
-
+  <li><a href="#home" id="hom" class="active">Home</a></li>
+  <li><a href="#about" id="abo">About</a></li>
+  <li><a href="#skills" id="skil">Skills</a></li>
+  <li><a href="#works" id="wor">My Projects</a></li>
+  <li><a href="#contact" id="cont">Contact</a></li>
+  <li>
+    <a href="cv.pdf" download class="download-cv" id="down">
+      &#8681; Download CV
+    </a>
+  </li>
 </ul>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="Home">
+  <div class="Home-container">
+    <div class="Home-text">
+      <h1>Hello, <br> I'm Firaol Desalegn</h1>
+      <h2>
+        <strong>a </strong>
+        <span style="--i:4" data-text="Web Developer">Web Developer</span>
+        <span style="--i:3" data-text="Frontend Developer">Frontend Developer</span>
+        <span style="--i:2" data-text="UI/UX Designer">UI/UX Designer</span>
+        <span style="--i:1" data-text="Mobile App Developer">Mobile App Developer</span>
+      </h2>
+      <p>I create beautiful, functional, and user-centered websites.</p>
+      
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">View My Work</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
+      </div>
 
-<div class="Home-text">
-            <h1> Hello, <br>
-                I'm Firaol Desalegn</h1>
-            <h2><strong>a</strong>
-                <span style="--i:4" data-text=" Web Developer">Web Developer</span>
-                <span style="--i:3" data-text=" Frontend Developer"> Frontend Developer</span>
-                <span style="--i:2" data-text=" UI / Design"> UI / Design</span>
-                <span style="--i:1" data-text="Mobile app developer">Mobile app developer</span>
-            </h2>
-<p>I create beautiful and functional websites.</p>
+      <!-- SOCIAL ICONS HERE -->
+      <div class="SocialIcon">
+        <a href="https://github.com/firayenate" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="https://instagram.com/firayenate" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://linkedin.com/in/firayenate" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://t.me/firayenate" target="_blank"><i class='bx bxl-telegram'></i></a>
+      </div>
+    </div>
 
-<button class="btn" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'})">View My Work</button>
-<button class="btn"  onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact Me</button>
-
-
-
-
- <!-- SOCIAL ICONS HERE -->
-  <div class="SocialIcon">
-    <a href="https://github.com/firayenate" target="_blank"><i class='bx bxl-github'></i></a>
-    <a href="https://instagram.com/in/firayenate" target="_blank"><i class='bx bxl-instagram'></i></a>
-      <a href="https://linkedin.com/in/firayenate" target="_blank">
-    <i class='bx bxl-linkedin'></i>
-  </a>
-    <a href="https://telegram.com/in/firayenate" target="_blank"><i class='bx bxl-telegram'></i></a>
+    <div class="home-img">
+      <div class="img-box">
+        <div class="img-item">
+          <img src="pro/photo_2026-03-17_21-40-21.jpg" alt="Firaol Desalegn Profile">
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
 </section>
 
 
 <!-- ABOUT -->
 
 <section id="about" class="about">
+  <div class="about-img-container">
+    <div class="about-img-box">
+      <img src="pro/photo_2026-03-17_21-40-21.jpg" alt="profile">
+    </div>
+  </div>
 
-<img src="pro/photo_2026-03-17_21-40-21.jpg" alt="profile" width="250" height="400" >
-
-<div class="about-text">
-
-<h2>About Me</h2>
-<div class="about-text-glass">
-
-
-<p id="para">
-Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy creating responsive and interactive websites using HTML, CSS, JavaScript, Python, and Vue.js. I love turning ideas into real projects, learning new technologies, and continuously improving my coding skills.
-</p>
-</div>
-<button id="readMoreBtn">Read More</button>
-
-</div>
-
+  <div class="about-text" id="about-text-container">
+    <h2>About <span>Me</span></h2>
+    <div class="about-text-glass">
+      <p class="about-desc-short">
+        Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy creating responsive and interactive websites using HTML, CSS, JavaScript, Python, and Vue.js. I love turning ideas into real projects, learning new technologies, and continuously improving my coding skills.
+      </p>
+      <div class="about-desc-more">
+        <p>I have hands-on experience in designing databases, implementing backend logic, and creating full-stack web applications. I love turning ideas into real projects, solving coding challenges, and continuously improving my programming skills.</p>
+        <p>I’m dedicated to writing clean, efficient code and learning the latest technologies to stay up-to-date in the fast-paced world of web development. My goal is to create applications that are not only functional but also meaningful and impactful.</p>
+      </div>
+    </div>
+    <button id="readMoreBtn">Read More</button>
+  </div>
 </section>
 
 <script>
-  const para = document.getElementById("para");
-  const btn = document.getElementById("readMoreBtn");
+  const aboutContainer = document.getElementById("about-text-container");
+  const readMoreBtn = document.getElementById("readMoreBtn");
 
-  let expanded = false;
-
-  btn.addEventListener("click", () => {
-    if (!expanded) {
-      para.innerHTML = `
-        Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy building responsive, interactive, and user-friendly websites using HTML, CSS, JavaScript, Python, and Vue.js.<br><br>
-        I have hands-on experience in designing databases, implementing backend logic, and creating full-stack web applications. I love turning ideas into real projects, solving coding challenges, and continuously improving my programming skills.<br><br>
-        I’m dedicated to writing clean, efficient code and learning the latest technologies to stay up-to-date in the fast-paced world of web development. My goal is to create applications that are not only functional but also meaningful and impactful.
-      `;
-      btn.textContent = "Show Less";
-      expanded = true;
+  readMoreBtn.addEventListener("click", () => {
+    aboutContainer.classList.toggle("expanded");
+    if (aboutContainer.classList.contains("expanded")) {
+      readMoreBtn.textContent = "Show Less";
     } else {
-      para.innerHTML = `
-        Hi, I’m Fira, a passionate computer science student and aspiring web developer. I enjoy creating responsive and interactive websites using HTML, CSS, JavaScript, Python, and Vue.js. I love turning ideas into real projects, learning new technologies, and continuously improving my coding skills.
-      `;
-      btn.textContent = "Read More";
-      expanded = false;
+      readMoreBtn.textContent = "Read More";
     }
   });
 </script>
@@ -119,94 +115,157 @@ Hi, I’m Fira, a passionate computer science student and aspiring web developer
 <!-- SKILLS -->
 
 <section id="skills" class="skills">
+  <div class="section-header">
+    <h2>My <span>Skills</span></h2>
+    <p>Technologies and tools I work with</p>
+  </div>
 
-<h2>My Skills</h2>
+  <div class="skill-container">
 
-<div class="skill-container">
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Icon">
+      </div>
+      <h3>HTML</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+    </div>
 
-<div class="skill-card" id="ht">
-  <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
-<h3>HTML</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon">
+      </div>
+      <h3>CSS</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:60%"></div></div>
+    </div>
 
-<div class="skill-card" id="cs">
-  <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Icon">
-<h3>CSS</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icon">
+      </div>
+      <h3>JavaScript</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:50%"></div></div>
+    </div>
 
-<div class="skill-card" id="js">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Icon">
-<h3>JavaScript</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon">
+      </div>
+      <h3>Python</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:50%"></div></div>
+    </div>
 
-<div class="skill-card" id="py">
-   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon">
-<h3>Python</h3>
-</div>
-<div class="skill-card" id="vu">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Vue.js Icon">
-  <h3>Vue.js</h3>
-</div>
-<div class="skill-card" id="ja">
-  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Icon">
-  <h3>Java</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Vue.js Icon">
+      </div>
+      <h3>Vue.js</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:15%"></div></div>
+    </div>
 
-<div class="skill-card" id="c">
-  <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Icon">
-  <h3>C++</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" alt="React Native Icon">
+      </div>
+      <h3>React Native</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+    </div>
 
-<div class="skill-card" id="jg">
-  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java GUI Icon">
-  <h3>Java GUI</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Icon">
+      </div>
+      <h3>Java</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+    </div>
 
-<div class="skill-card" id="da">
-  <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database Icon">
-  <h3>Database</h3>
-</div>
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Icon">
+      </div>
+      <h3>C++</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:65%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java GUI Icon">
+      </div>
+      <h3>Java GUI</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Database Icon">
+      </div>
+      <h3>Database</h3>
+      <div class="skill-bar"><div class="skill-level" style="width:78%"></div></div>
+    </div>
+
+  </div>
 </section>
 
 
 
 <section id="works" class="works">
-  <h2>My Projects</h2>
+  <div class="section-header">
+    <h2>My <span>Projects</span></h2>
+    <p>Some of my recent work</p>
+  </div>
 <div class="projects-container">
 <div class="project-card">
-  <img src="pro/library.jpg" alt="Library Management System in Java">
+  <img src="pro/library.jpg" alt="Library Management System">
   <h3>Library Management System</h3>
-  <p>A Java GUI application to manage books, users, and borrowing transactions efficiently.</p>
-  <a href="library-management-java.html" class="btn" target="_blank">View Project</a>
+  <p>A cross-platform system to manage books, users, and borrowing transactions. Built for Web, Desktop (Java GUI), and Mobile (React Native).</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="https://github.com/firayenate/library-management-system.git" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">Web Repo</a>
+    <a href="https://github.com/firayenate/librarysystem-GUI-with-java.git" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">Java GUI Repo</a>
+    <a href="https://github.com/firayenate/library-mobile-App.git" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">Mobile Repo</a>
+  </div>
 </div>
-<div class="projects-container">
- <div class="project-card">
 
-<img src="pro/shoe.jpg" alt="Shoe Shop">
-<h3>Shoe Shop</h3>
- <p>A responsive online Shoe Shop website with product listings, shopping cart, and checkout functionality.</p>
-  <a href="pro/index.html"  class="btn" target="_blank">View Project</a>
- </div>
+<div class="project-card">
+  <img src="pro/shoe.jpg" alt="Shoe Shop">
+  <h3>Shoe Shop</h3>
+  <p>A responsive online Shoe Shop website with product listings, shopping cart, and checkout functionality.</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="#" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0; cursor: default;" onclick="event.preventDefault();">Working...</a>
+  </div>
+</div>
+
 <div class="project-card">
   <img src="pro/rock.jpg" alt="Rock Paper Scissors Game">
   <h3>Rock Paper Scissors Game</h3>
   <p>A simple JavaScript game where you can play Rock, Paper, Scissors against the computer. Includes score tracking and fun interaction.</p>
-  <a href="pro/rock-paper-scissor.html" class="btn" target="_blank">View Project</a>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="pro/rock-paper-scissor.html" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Project</a>
+  </div>
 </div>
+
 <div class="project-card">
-
-   <img src="pro/port.jpg" alt="My Portfolio">
+  <img src="pro/port.jpg" alt="My Portfolio">
   <h3>My Portfolio</h3>
-<p>My personal portfolio website showcasing my projects and skills.</p>
-  <a href="home.html" class="btn" target="_blank">View Project</a>
+  <p>My personal portfolio website showcasing my projects and skills.</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="index.html" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Project</a>
+  </div>
 </div>
-
 
 <div class="project-card">
   <img src="pro/car-rental.jpg" alt="Car Rental System">
   <h3>Car Rental System</h3>
   <p>A C++ program to manage car rentals, including booking, returns, and customer info.</p>
-  <a href="pro/home.html" class="btn" target="_blank">View Project</a>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="pro/home.html" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Project</a>
+  </div>
+</div>
+<div class="project-card">
+  <img src="pro/cafe.jpg" alt="Hotel Management System">
+  <h3>Hotel Management System</h3>
+  <p>A C++ console application to manage hotel room bookings, check-outs, and status tracking.</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
+    <a href="pro/hotel-management.cpp" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Code</a>
+  </div>
 </div>
 </div>
 
@@ -216,7 +275,10 @@ Hi, I’m Fira, a passionate computer science student and aspiring web developer
 <!-- CONTACT -->
 
 <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="section-header">
+            <h2>Contact <span>Me</span></h2>
+            <p>Let's work together</p>
+        </div>
 
         <div class="contact-container">
             <div class="contact-info">
@@ -244,18 +306,35 @@ Hi, I’m Fira, a passionate computer science student and aspiring web developer
             </div>
 
             <div class="contact-form">
-             <form action="https://formspree.io/f/yourformid" method="POST">
+             <form id="contactForm" action="https://formspree.io/f/mredqygy" method="POST">
   <div class="input-box">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
+    <div class="input-wrapper">
+      <input type="text" id="nameInput" name="name" placeholder="Full Name" required>
+      <span class="error-text" id="nameError"></span>
+    </div>
+    <div class="input-wrapper">
+      <input type="email" id="emailInput" name="email" placeholder="Email Address" required>
+      <span class="error-text" id="emailError"></span>
+    </div>
   </div>
   <div class="input-box">
-    <input type="number" name="mobile" placeholder="Mobile Number" required>
-    <input type="text" name="subject" placeholder="Email Subject" required>
+    <div class="input-wrapper">
+      <input type="tel" id="mobileInput" name="mobile" placeholder="Mobile Number" required>
+      <span class="error-text" id="mobileError"></span>
+    </div>
+    <div class="input-wrapper">
+      <input type="text" id="subjectInput" name="subject" placeholder="Email Subject" required>
+      <span class="error-text" id="subjectError"></span>
+    </div>
   </div>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <input type="submit" value="Send Message" class="btn">
-  <input type="reset" value="Clear" class="btn">
+  <div class="input-wrapper">
+    <textarea id="messageInput" name="message" placeholder="Your Message" required></textarea>
+    <span class="error-text" id="messageError"></span>
+  </div>
+  <div style="display: flex; gap: 20px; width: 100%;">
+    <input type="submit" value="Send Message" class="btn" style="flex:1; margin-top:0;">
+    <input type="reset" value="Clear" class="btn" style="flex:1; margin-top:0;">
+  </div>
 </form>
             </div>
         </div>
@@ -265,8 +344,159 @@ Hi, I’m Fira, a passionate computer science student and aspiring web developer
 
     </section>
 
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('nav ul');
+  const navLinks = document.querySelectorAll('nav ul li a');
 
+  // Toggle mobile menu
+  mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('nav-active');
+    const icon = mobileMenu.querySelector('i');
+    if (navList.classList.contains('nav-active')) {
+      icon.className = 'bx bx-x';
+    } else {
+      icon.className = 'bx bx-menu';
+    }
+  });
 
+  // Close mobile menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navList.classList.remove('nav-active');
+      mobileMenu.querySelector('i').className = 'bx bx-menu';
+    });
+  });
+
+  // Scroll spy active class
+  const sections = document.querySelectorAll('section');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.scrollY >= sectionTop - 150) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').slice(1) === current) {
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // --- ADVANCED FORM VALIDATION ---
+  const contactForm = document.getElementById("contactForm");
+  
+  const nameInput = document.getElementById("nameInput");
+  const emailInput = document.getElementById("emailInput");
+  const mobileInput = document.getElementById("mobileInput");
+  const subjectInput = document.getElementById("subjectInput");
+  const messageInput = document.getElementById("messageInput");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const mobileError = document.getElementById("mobileError");
+  const subjectError = document.getElementById("subjectError");
+  const messageError = document.getElementById("messageError");
+
+  function showError(input, errorElement, message) {
+    errorElement.textContent = message;
+    input.classList.remove("valid");
+    input.classList.add("invalid");
+  }
+
+  function showSuccess(input, errorElement) {
+    errorElement.textContent = "";
+    input.classList.remove("invalid");
+    input.classList.add("valid");
+  }
+
+  function validateName() {
+    const val = nameInput.value.trim();
+    if (val.length < 3) {
+      showError(nameInput, nameError, "Name must be at least 3 characters");
+      return false;
+    }
+    if (!/^[a-zA-Z\s]+$/.test(val)) {
+      showError(nameInput, nameError, "Name can only contain letters");
+      return false;
+    }
+    showSuccess(nameInput, nameError);
+    return true;
+  }
+
+  function validateEmail() {
+    const val = emailInput.value.trim();
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regex.test(val)) {
+      showError(emailInput, emailError, "Please enter a valid email address");
+      return false;
+    }
+    showSuccess(emailInput, emailError);
+    return true;
+  }
+
+  function validateMobile() {
+    const val = mobileInput.value.trim();
+    if (val.length < 10 || !/^\d+$/.test(val)) {
+      showError(mobileInput, mobileError, "Enter a valid mobile number (min 10 digits)");
+      return false;
+    }
+    showSuccess(mobileInput, mobileError);
+    return true;
+  }
+
+  function validateSubject() {
+    const val = subjectInput.value.trim();
+    if (val.length < 5) {
+      showError(subjectInput, subjectError, "Subject must be at least 5 characters");
+      return false;
+    }
+    showSuccess(subjectInput, subjectError);
+    return true;
+  }
+
+  function validateMessage() {
+    const val = messageInput.value.trim();
+    if (val.length < 10) {
+      showError(messageInput, messageError, "Message must be at least 10 characters");
+      return false;
+    }
+    showSuccess(messageInput, messageError);
+    return true;
+  }
+
+  nameInput.addEventListener("input", validateName);
+  emailInput.addEventListener("input", validateEmail);
+  mobileInput.addEventListener("input", validateMobile);
+  subjectInput.addEventListener("input", validateSubject);
+  messageInput.addEventListener("input", validateMessage);
+
+  contactForm.addEventListener("submit", function(e) {
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isMobileValid = validateMobile();
+    const isSubjectValid = validateSubject();
+    const isMessageValid = validateMessage();
+
+    if (!isNameValid || !isEmailValid || !isMobileValid || !isSubjectValid || !isMessageValid) {
+      e.preventDefault(); // Prevent form submission if there are errors
+    }
+  });
+
+  contactForm.addEventListener("reset", function() {
+    [nameInput, emailInput, mobileInput, subjectInput, messageInput].forEach(input => {
+      input.classList.remove("invalid", "valid");
+    });
+    [nameError, emailError, mobileError, subjectError, messageError].forEach(el => {
+      el.textContent = "";
+    });
+  });
+</script>
 
 </body>
 </html>
