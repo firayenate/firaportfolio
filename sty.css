@@ -1267,3 +1267,31 @@ footer {
   border-color: #00ff88 !important;
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.15) !important;
 }
+
+/* Animations */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.home-img .img-box {
+  animation: float 5s ease-in-out infinite;
+}

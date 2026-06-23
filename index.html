@@ -15,7 +15,7 @@
 
 <!-- NAVBAR -->
 <nav>
-<img src="pro/logooo.png" alt="Fira" width="100" height="70">
+<a href="#home" class="logo"><span class="bracket">&lt;</span>Fira<span class="bracket"> /&gt;</span></a>
 <div class="menu-toggle" id="mobile-menu">
   <i class="bx bx-menu"></i>
 </div>
@@ -26,7 +26,7 @@
   <li><a href="#works" id="wor">My Projects</a></li>
   <li><a href="#contact" id="cont">Contact</a></li>
   <li>
-    <a href="cv.pdf" download class="download-cv" id="down">
+    <a href="Firaol_Desalegn_CV.docx" download class="download-cv" id="down">
       &#8681; Download CV
     </a>
   </li>
@@ -224,14 +224,7 @@
   </div>
 </div>
 
-<div class="project-card">
-  <img src="pro/shoe.jpg" alt="Shoe Shop">
-  <h3>Shoe Shop</h3>
-  <p>A responsive online Shoe Shop website with product listings, shopping cart, and checkout functionality.</p>
-  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
-    <a href="#" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0; cursor: default;" onclick="event.preventDefault();">Working...</a>
-  </div>
-</div>
+
 
 <div class="project-card">
   <img src="pro/rock.jpg" alt="Rock Paper Scissors Game">
@@ -242,21 +235,14 @@
   </div>
 </div>
 
-<div class="project-card">
-  <img src="pro/port.jpg" alt="My Portfolio">
-  <h3>My Portfolio</h3>
-  <p>My personal portfolio website showcasing my projects and skills.</p>
-  <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
-    <a href="index.html" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Project</a>
-  </div>
-</div>
+
 
 <div class="project-card">
   <img src="pro/car-rental.jpg" alt="Car Rental System">
   <h3>Car Rental System</h3>
   <p>A C++ program to manage car rentals, including booking, returns, and customer info.</p>
   <div style="display: flex; flex-direction: column; gap: 8px; margin-top: auto; width: 100%;">
-    <a href="pro/home.html" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Project</a>
+    <a href="pro/car-rental.cpp" class="btn" style="padding: 8px; font-size: 13px; text-align: center; margin-top: 0;" target="_blank">View Code</a>
   </div>
 </div>
 <div class="project-card">
@@ -301,6 +287,13 @@
                     <div>
                         <h4>Telegram</h4>
                         <p>@firayenate</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class='bx bxl-github'></i>
+                    <div>
+                        <h4>GitHub</h4>
+                        <p>github.com/firayenate</p>
                     </div>
                 </div>
             </div>
@@ -495,6 +488,21 @@
     [nameError, emailError, mobileError, subjectError, messageError].forEach(el => {
       el.textContent = "";
     });
+  });
+
+  // Fade-in animation on scroll
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.classList.add('fade-section');
+    observer.observe(section);
   });
 </script>
 
