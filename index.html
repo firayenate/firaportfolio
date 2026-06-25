@@ -33,6 +33,9 @@
 </ul>
 </nav>
 
+<!-- MOBILE MENU OVERLAY -->
+<div class="menu-overlay" id="menu-overlay"></div>
+
 <!-- HERO -->
 <section id="home" class="Home">
   <div class="Home-container">
@@ -341,38 +344,50 @@
   const mobileMenu = document.getElementById('mobile-menu');
   const navList = document.querySelector('nav ul');
   const navLinks = document.querySelectorAll('nav ul li a');
+  const menuOverlay = document.getElementById('menu-overlay');
+
+  function openMenu() {
+    navList.classList.add('nav-active');
+    menuOverlay.classList.add('active');
+    mobileMenu.querySelector('i').className = 'bx bx-x';
+  }
+
+  function closeMenu() {
+    navList.classList.remove('nav-active');
+    menuOverlay.classList.remove('active');
+    mobileMenu.querySelector('i').className = 'bx bx-menu';
+  }
 
   // Toggle mobile menu
   mobileMenu.addEventListener('click', () => {
-    navList.classList.toggle('nav-active');
-    const icon = mobileMenu.querySelector('i');
     if (navList.classList.contains('nav-active')) {
-      icon.className = 'bx bx-x';
+      closeMenu();
     } else {
-      icon.className = 'bx bx-menu';
+      openMenu();
     }
   });
 
-  // Close mobile menu when a link is clicked
+  // Close menu when overlay is clicked
+  menuOverlay.addEventListener('click', closeMenu);
+
+  // Close mobile menu then navigate
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navList.classList.remove('nav-active');
-      mobileMenu.querySelector('i').className = 'bx bx-menu';
+      closeMenu();
     });
   });
 
   // Scroll spy active class
   const sections = document.querySelectorAll('section');
+
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
       if (window.scrollY >= sectionTop - 150) {
         current = section.getAttribute('id');
       }
     });
-
     navLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href').slice(1) === current) {
@@ -381,9 +396,23 @@
     });
   });
 
+  // Fade-in animation on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    section.classList.add('fade-section');
+    observer.observe(section);
+  });
+
   // --- ADVANCED FORM VALIDATION ---
   const contactForm = document.getElementById("contactForm");
-  
+
   const nameInput = document.getElementById("nameInput");
   const emailInput = document.getElementById("emailInput");
   const mobileInput = document.getElementById("mobileInput");
@@ -410,57 +439,34 @@
 
   function validateName() {
     const val = nameInput.value.trim();
-    if (val.length < 3) {
-      showError(nameInput, nameError, "Name must be at least 3 characters");
-      return false;
-    }
-    if (!/^[a-zA-Z\s]+$/.test(val)) {
-      showError(nameInput, nameError, "Name can only contain letters");
-      return false;
-    }
-    showSuccess(nameInput, nameError);
-    return true;
+    if (val.length < 3) { showError(nameInput, nameError, "Name must be at least 3 characters"); return false; }
+    if (!/^[a-zA-Z\s]+$/.test(val)) { showError(nameInput, nameError, "Name can only contain letters"); return false; }
+    showSuccess(nameInput, nameError); return true;
   }
 
   function validateEmail() {
     const val = emailInput.value.trim();
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(val)) {
-      showError(emailInput, emailError, "Please enter a valid email address");
-      return false;
-    }
-    showSuccess(emailInput, emailError);
-    return true;
+    if (!regex.test(val)) { showError(emailInput, emailError, "Please enter a valid email address"); return false; }
+    showSuccess(emailInput, emailError); return true;
   }
 
   function validateMobile() {
     const val = mobileInput.value.trim();
-    if (val.length < 10 || !/^\d+$/.test(val)) {
-      showError(mobileInput, mobileError, "Enter a valid mobile number (min 10 digits)");
-      return false;
-    }
-    showSuccess(mobileInput, mobileError);
-    return true;
+    if (val.length < 10 || !/^\d+$/.test(val)) { showError(mobileInput, mobileError, "Enter a valid mobile number (min 10 digits)"); return false; }
+    showSuccess(mobileInput, mobileError); return true;
   }
 
   function validateSubject() {
     const val = subjectInput.value.trim();
-    if (val.length < 5) {
-      showError(subjectInput, subjectError, "Subject must be at least 5 characters");
-      return false;
-    }
-    showSuccess(subjectInput, subjectError);
-    return true;
+    if (val.length < 5) { showError(subjectInput, subjectError, "Subject must be at least 5 characters"); return false; }
+    showSuccess(subjectInput, subjectError); return true;
   }
 
   function validateMessage() {
     const val = messageInput.value.trim();
-    if (val.length < 10) {
-      showError(messageInput, messageError, "Message must be at least 10 characters");
-      return false;
-    }
-    showSuccess(messageInput, messageError);
-    return true;
+    if (val.length < 10) { showError(messageInput, messageError, "Message must be at least 10 characters"); return false; }
+    showSuccess(messageInput, messageError); return true;
   }
 
   nameInput.addEventListener("input", validateName);
@@ -475,9 +481,8 @@
     const isMobileValid = validateMobile();
     const isSubjectValid = validateSubject();
     const isMessageValid = validateMessage();
-
     if (!isNameValid || !isEmailValid || !isMobileValid || !isSubjectValid || !isMessageValid) {
-      e.preventDefault(); // Prevent form submission if there are errors
+      e.preventDefault();
     }
   });
 
@@ -488,21 +493,6 @@
     [nameError, emailError, mobileError, subjectError, messageError].forEach(el => {
       el.textContent = "";
     });
-  });
-
-  // Fade-in animation on scroll
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  sections.forEach(section => {
-    section.classList.add('fade-section');
-    observer.observe(section);
   });
 </script>
 
